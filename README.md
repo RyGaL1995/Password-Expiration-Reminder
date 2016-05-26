@@ -18,6 +18,8 @@ Notes:
 
 On Windows Server 2012 R2 there is a Startup delay for logon scripts of 5 minutes. You can change the delay between user logon and when scripts run with the policyby adding "Computer Configuration\Policies\Administrative Templates\System\Group Policy\Configure Logon Script Delay" enabling and specifying a time or disabling the Delay.
 
+You can change the password expiry days for the user to be notified by changeing line 3 in the "Password-Expiration-Reminder.ps1" script. $WariningZone = 5 <-- Change this Number
+
 Instructions:
 
 1. On the terminal server Extract the files in the zip
