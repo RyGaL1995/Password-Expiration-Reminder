@@ -3,6 +3,16 @@ Powershell Script to Prompt user to change Password when it expires in less than
 
 Created and tested in a Windows Server 2008 R2 DC and Citrix XA 6.5 Server
 
+Why?
+
+In some terminal/citrix server enviroments where the user logs on via a thin client or a machine that is not on the domain then they will not get a mesage that their password will expire. Even though there are some standard GPO's to implement a notification I could not get them to work so wrote this script.
+
+How it works
+
+The Script runs at the users login and if their password expires in less then 5 days it will prompt them to ask them to change their password. If they select yes then it will take them to the Windows Security Screen where they can change there password.
+
+The Prompt is similar to the one from Windows XP but loads after the user is logged in.
+
 Installation Instructions
 
 1. On the terminal server Extract the files in the zip
