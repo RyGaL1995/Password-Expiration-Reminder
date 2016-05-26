@@ -2,6 +2,7 @@
 Powershell Script to Prompt user to change Password when it expires in less than 5 days if there is no poup in a terminal/citrix server enviroment.
 
 Created and tested in a Windows Server 2008 R2 DC and Citrix XA 6.5 Server
+Tested and working on Windows Server 2012 R2 DC and Citrix XA 7.2 Server
 
 Why?
 
@@ -12,6 +13,10 @@ How it works
 The Script runs at the users login and if their password expires in less then 5 days it will prompt them to ask them to change their password. If they select yes then it will take them to the Windows Security Screen where they can change there password.
 
 The Prompt is similar to the one from Windows XP but loads after the user is logged in.
+
+Notes
+
+On Windows Server 2012 R2 there is a Startup delay for logon scripts of 5 minutes. You can change the delay between user logon and when scripts run with the policyby adding "Computer Configuration\Policies\Administrative Templates\System\Group Policy\Configure Logon Script Delay" enabling and specifying a time or disabling the Delay.
 
 Installation Instructions
 
