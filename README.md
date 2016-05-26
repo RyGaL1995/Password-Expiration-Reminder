@@ -9,16 +9,17 @@ Why?
 In some terminal/citrix server enviroments where the user logs on via a thin client or a machine that is not on the domain then they will not get a mesage that their password will expire. Even though there are some standard GPO's to implement a notification I could not get them to work so wrote this script.
 
 How it works
+How it works:
 
 The Script runs at the users login and if their password expires in less then 5 days it will prompt them to ask them to change their password. If they select yes then it will take them to the Windows Security Screen where they can change there password.
 
 The Prompt is similar to the one from Windows XP but loads after the user is logged in.
 
-Notes
+Notes:
 
 On Windows Server 2012 R2 there is a Startup delay for logon scripts of 5 minutes. You can change the delay between user logon and when scripts run with the policyby adding "Computer Configuration\Policies\Administrative Templates\System\Group Policy\Configure Logon Script Delay" enabling and specifying a time or disabling the Delay.
 
-Installation Instructions
+Installation Instructions:
 
 1. On the terminal server Extract the files in the zip
 2. Right Click on SAT-AD-PowerShell.ps1 and choose "Run with Powershell"
