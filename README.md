@@ -1,6 +1,7 @@
 # Password-Expiration-Reminder
 Powershell Script to Prompt user to change Password when it expires in less than 5 days if there is no poup in a terminal/citrix server enviroment.
 
+Created and tested in a Windows Server 2008 R2 DC and Citrix XA 6.5 Server
 
 Installation Instructions
 
