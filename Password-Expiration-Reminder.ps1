@@ -1,9 +1,10 @@
 ﻿import-module activedirectory
 $CurrentUser = $env:username
+$WariningZone = 5
 
 $PassExpiry = (([datetime]::FromFileTime((Get-ADUser –Identity $CurrentUser -Properties "msDS-UserPasswordExpiryTimeComputed")."msDS-UserPasswordExpiryTimeComputed"))-(Get-Date)).Days
 
-If ( $PassExpiry -lt 5 ){ 
+If ( $PassExpiry -lt $WariningZone ){ 
 [System.Reflection.Assembly]::LoadWithPartialName("System.Windows.Forms")
 
 
